@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1756" height="2152" viewBox="0 0 1756 2152" fill="none">
+  <title>Puddl3 — Money Flow Operations</title>
+  <rect id="Canvas-Background" x="0" y="0" width="1756" height="2152" fill="#E9EEF7" />
+  <g id="Header">
+    <text x="100" y="92" font-family="IBM Plex Mono" font-size="12.5" fill="#2FD8E8" font-weight="600" letter-spacing="1.8">PUDDL3 · OPERATIONS</text>
+    <text x="100" y="158" font-family="Newsreader" font-size="54" fill="#1F2A3A" font-weight="500">Money Flow Operations</text>
+    <text x="100" y="208" font-family="Newsreader" font-size="20" fill="#3C4A5F" font-style="italic">Every dollar's path through Puddl3 — from an employer's bank account to a worker's wallet, and from</text>
+    <text x="100" y="238" font-family="Newsreader" font-size="20" fill="#3C4A5F" font-style="italic">withheld taxes to the IRS — traced end to end.</text>
+  </g>
+  <g id="Diagram-Frame">
+    <rect x="100" y="286" width="1556" height="1056" rx="6" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+  </g>
+  <g id="Money-Flow-Diagram" transform="translate(208,314)">
+    <g id="Edges">
+        <g id="Edge-Employer-to-BaaS">
+          <path d="M190,94 L190,144" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,136.72 L190,145.82 L194.55,136.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="123" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">ACH - Debit/Credit</text>
+        <g id="Edge-BaaS-to-Wallet">
+          <path d="M190,208 L190,258" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,250.72 L190,259.82 L194.55,250.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="237" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">Fiat → USDC → Payroll Wallet</text>
+        <g id="Edge-Wallet-to-ClockOut">
+          <path d="M190,348 L190,398" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,390.72 L190,399.82 L194.55,390.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="377" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">at clock-out</text>
+        <g id="Edge-ClockOut-to-Stellar">
+          <path d="M190,458 L190,508" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,500.72 L190,509.82 L194.55,500.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="487" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">net pay (USDC)</text>
+        <g id="Edge-Stellar-to-WorkerWallet">
+          <path d="M190,572 L190,622" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,614.72 L190,623.82 L194.55,614.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="601" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">USDC delivered</text>
+        <g id="Edge-Wallet-to-YieldJunction">
+          <path d="M340,305 L820,305" fill="none" stroke="#1F2A3A" stroke-width="1.3" />
+          <circle cx="820" cy="305" r="3.5" fill="#1F2A3A" />
+        </g>
+        <text x="420" y="298" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">yield</text>
+        <g id="Edge-Yield-to-Employer">
+          <path d="M820,305 L980,305 L980,430 L1080,430" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M1072.72,434.55 L1081.82,430 L1072.72,425.45 Z" fill="#1F2A3A" />
+        </g>
+        <text x="900" y="296" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82" text-anchor="middle">majority → employer</text>
+        <g id="Edge-Yield-to-Revenue">
+          <path d="M820,305 L820,610 L1080,610" fill="none" stroke="#2FD8E8" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="5 4" opacity="0.85" />
+          <path d="M1072.72,614.55 L1081.82,610 L1072.72,605.45 Z" fill="#2FD8E8" opacity="0.85" />
+        </g>
+        <text x="836" y="593" font-family="IBM Plex Mono" font-size="11.5" fill="#2FD8E8">cut → Puddl3</text>
+        <g id="Edge-ClockOut-to-TaxTrust">
+          <path d="M340,428 L420,428 L420,553 L500,553" fill="none" stroke="#A9752A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M492.72,557.55 L501.82,553 L492.72,548.45 Z" fill="#1F2A3A" />
+        </g>
+        <text x="430" y="492" font-family="IBM Plex Mono" font-size="11.5" fill="#A9752A">withheld tax (USDC)</text>
+        <g id="Edge-TaxTrust-to-Convert">
+          <path d="M650,598 L650,648" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M645.45,640.72 L650,649.82 L654.55,640.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="666" y="628" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">near deposit date</text>
+        <g id="Edge-Convert-to-IRS">
+          <path d="M650,712 L650,762" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M645.45,754.72 L650,763.82 L654.55,754.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="666" y="742" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">via Reporting Agent</text>
+        <g id="Edge-TaxTrust-to-Revenue-FLAGGED">
+          <path d="M800,553 L1080,553" fill="none" stroke="#A9752A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="5 4" opacity="0.85" />
+          <path d="M1072.72,557.55 L1081.82,553 L1072.72,548.45 Z" fill="#A9752A" opacity="0.85" />
+        </g>
+        <text x="836" y="540" font-family="IBM Plex Mono" font-size="11.5" fill="#A9752A">yield cut — pending legal review</text>
+        <g id="Edge-WorkerWallet-to-Card">
+          <path d="M190,702 L190,752" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M185.45,744.72 L190,753.82 L194.55,744.72 Z" fill="#1F2A3A" />
+        </g>
+        <text x="205" y="731" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82">spend</text>
+        <g id="Edge-WorkerWallet-to-Bank-FreeACH">
+          <path d="M40,662 L-55,662 L-55,911 L40,911" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M32.72,915.55 L41.82,911 L32.72,906.45 Z" fill="#1F2A3A" />
+        </g>
+        <text x="-8" y="679" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82" text-anchor="middle">Free ACH</text>
+        <g id="Edge-WorkerWallet-to-Bank-Instant">
+          <path d="M340,662 L435,662 L435,911 L340,911" fill="none" stroke="#1F2A3A" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" />
+          <path d="M347.28,906.45 L338.18,911 L347.28,915.55 Z" fill="#1F2A3A" />
+        </g>
+        <text x="388" y="679" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82" text-anchor="middle">Instant</text>
+        <text x="388" y="693" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82" text-anchor="middle">Withdrawal</text>
+        <text x="388" y="707" font-family="IBM Plex Mono" font-size="11.5" fill="#5C6B82" text-anchor="middle">Fee'd</text>
+        <g id="Edge-Card-to-Revenue">
+          <path d="M340,784 L470,784 L470,880 L1000,880 L1000,645 L1080,645" fill="none" stroke="#2FD8E8" stroke-width="1.3" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="5 4" opacity="0.85" />
+          <path d="M1072.72,649.55 L1081.82,645 L1072.72,640.45 Z" fill="#2FD8E8" opacity="0.85" />
+        </g>
+        <text x="550" y="873" font-family="IBM Plex Mono" font-size="11.5" fill="#2FD8E8">interchange + withdrawal fee</text>
+    </g>
+    <g id="Nodes">
+      <g id="Node-Employer-Bank">
+        <rect x="40" y="30" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="58" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Employer Bank / Card</text>
+        <text x="190" y="76" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">funding source</text>
+      </g>
+      <g id="Node-BaaS-Partner">
+        <rect x="40" y="144" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="172" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">BaaS / Stablecoin Partner</text>
+        <text x="190" y="190" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">fiat → USDC conversion</text>
+      </g>
+      <g id="Node-Payroll-Wallet">
+        <rect x="40" y="258" width="300" height="90" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="298" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Employer Owned Payroll Wallet</text>
+        <text x="190" y="320" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">USDC · yield-bearing, 100% Employer funded</text>
+      </g>
+      <g id="Node-ClockOut-Event">
+        <rect x="40" y="398" width="300" height="60" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="424" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Clock-Out Event</text>
+        <text x="190" y="442" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">hours → withholding → net</text>
+      </g>
+      <g id="Node-Stellar-Settlement">
+        <rect x="40" y="508" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="536" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Stellar Settlement</text>
+        <text x="190" y="554" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">Near Instant USDC Settlement, on-chain</text>
+      </g>
+      <g id="Node-Worker-Wallet">
+        <rect x="40" y="622" width="300" height="80" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="656" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Worker Wallet</text>
+        <text x="190" y="676" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">USDC · self-custodial wallet</text>
+      </g>
+      <g id="Node-Puddl3-Card">
+        <rect x="40" y="752" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="780" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Puddl3 Card</text>
+        <text x="190" y="798" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">spend directly from balance</text>
+      </g>
+      <g id="Node-Worker-Bank">
+        <rect x="40" y="866" width="300" height="90" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="190" y="906" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Worker Bank Account</text>
+        <text x="190" y="928" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">off-ramp destination</text>
+      </g>
+      <g id="Node-Tax-Trust-Pool-FLAGGED">
+        <rect x="500" y="508" width="300" height="90" rx="4" fill="#FFFFFF" stroke="#A9752A" stroke-width="1.3" />
+        <text x="650" y="548" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Tax Trust Pool</text>
+        <text x="650" y="570" font-family="IBM Plex Mono" font-size="11" fill="#A9752A" text-anchor="middle">USDC, yield-bearing — highest legal risk</text>
+      </g>
+      <g id="Node-Convert-USDC-USD">
+        <rect x="500" y="648" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="650" y="676" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Convert USDC → USD</text>
+        <text x="650" y="694" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">shortly before deposit date</text>
+      </g>
+      <g id="Node-Tax-Agencies">
+        <rect x="500" y="762" width="300" height="80" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="650" y="796" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">IRS / State Tax Agencies</text>
+        <text x="650" y="816" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">via Reporting Agent + EFTPS</text>
+      </g>
+      <g id="Node-Employer">
+        <rect x="1080" y="398" width="300" height="64" rx="4" fill="#FFFFFF" stroke="#1F2A3A" stroke-width="1.3" />
+        <text x="1230" y="426" font-family="Public Sans" font-size="16" fill="#1F2A3A" font-weight="600" text-anchor="middle">Employer</text>
+        <text x="1230" y="444" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">receives yield majority</text>
+      </g>
+      <g id="Node-Puddl3-Revenue">
+        <rect x="1080" y="512" width="300" height="170" rx="4" fill="#FFFFFF" stroke="#2FD8E8" stroke-width="1.6" />
+        <text x="1230" y="545" font-family="Public Sans" font-size="16" fill="#2FD8E8" font-weight="600" text-anchor="middle">Puddl3 Revenue</text>
+        <text x="1230" y="567" font-family="IBM Plex Mono" font-size="11" fill="#5C6B82" text-anchor="middle">yield cuts · fees · interchange</text>
+      </g>
+    </g>
+  </g>
+  <g id="Caption">
+    <text x="100" y="1376" font-family="Public Sans" font-size="13.6" fill="#5C6B82">Solid arrows are money moving. The clock-out event is where each payment splits in two — net pay continues down to the worker,</text>
+    <text x="100" y="1398" font-family="Public Sans" font-size="13.6" fill="#5C6B82">withheld tax branches into the trust pool. The teal paths are where Puddl3's own revenue accumulates; the amber path is the</text>
+    <text x="100" y="1420" font-family="Public Sans" font-size="13.6" fill="#5C6B82">single highest-priority open legal question in the whole model.</text>
+  </g>
+  <g id="Legend">
+    <path d="M100,1470 L126,1470" stroke="#1F2A3A" stroke-width="2" />
+    <text x="136" y="1474" font-family="IBM Plex Mono" font-size="12.2" fill="#3C4A5F">money movement</text>
+    <path d="M284.48,1470 L310.48,1470" stroke="#2FD8E8" stroke-width="2" stroke-dasharray="5 4" />
+    <text x="320.48" y="1474" font-family="IBM Plex Mono" font-size="12.2" fill="#3C4A5F">revenue roll-up</text>
+    <path d="M476.28000000000003,1470 L502.28000000000003,1470" stroke="#A9752A" stroke-width="2" stroke-dasharray="5 4" />
+    <text x="512.28" y="1474" font-family="IBM Plex Mono" font-size="12.2" fill="#3C4A5F">flagged legal risk</text>
+  </g>
+  <g id="Walkthrough">
+    <g id="Step-01">
+      <rect x="100" y="1580" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="118" y="1612" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">01</text>
+      <text x="118" y="1638" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Employer funds</text>
+      <text x="118" y="1672" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Bank/debit pull converts 100% to USDC</text>
+      <text x="118" y="1691" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">immediately — the whole deposit becomes the</text>
+      <text x="118" y="1710" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">yield-bearing Payroll Wallet, not just the</text>
+      <text x="118" y="1729" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">eventual net-pay portion.</text>
+    </g>
+    <g id="Step-02">
+      <rect x="494" y="1580" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="512" y="1612" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">02</text>
+      <text x="512" y="1638" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Wallet sits, earns yield</text>
+      <text x="512" y="1672" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Undisbursed USDC generates yield continuously.</text>
+      <text x="512" y="1691" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Puddl3 takes a flat cut; the rest returns to</text>
+      <text x="512" y="1710" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">the employer — marketed as a benefit, not just</text>
+      <text x="512" y="1729" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">a cost offset.</text>
+    </g>
+    <g id="Step-03">
+      <rect x="888" y="1580" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="906" y="1612" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">03</text>
+      <text x="906" y="1638" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Clock-out splits the wallet</text>
+      <text x="906" y="1672" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Up to 2×/day, each independently final. Net pay</text>
+      <text x="906" y="1691" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">and withheld tax leave the wallet as two flows</text>
+      <text x="906" y="1710" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">that never recombine.</text>
+    </g>
+    <g id="Step-04">
+      <rect x="1282" y="1580" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="1300" y="1612" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">04</text>
+      <text x="1300" y="1638" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Net pay → worker, in seconds</text>
+      <text x="1300" y="1672" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Stellar settlement lands USDC in the worker's</text>
+      <text x="1300" y="1691" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">wallet almost instantly — the core product</text>
+      <text x="1300" y="1710" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">moment.</text>
+    </g>
+    <g id="Step-05">
+      <rect x="100" y="1796" width="374" height="196" rx="4" fill="#ECECEB" stroke="#BAA689" stroke-width="1" />
+      <text x="118" y="1828" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">05</text>
+      <text x="118" y="1854" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Withheld tax → trust pool</text>
+      <text x="118" y="1888" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Stays as USDC, still earning yield, until</text>
+      <text x="118" y="1907" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">shortly before the statutory deposit date.</text>
+      <text x="118" y="1926" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Whether this yield is even permissible is the</text>
+      <text x="118" y="1945" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">top open legal question.</text>
+    </g>
+    <g id="Step-06">
+      <rect x="494" y="1796" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="512" y="1828" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">06</text>
+      <text x="512" y="1854" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Remittance</text>
+      <text x="512" y="1888" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Converted back to USD and remitted to the</text>
+      <text x="512" y="1907" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">IRS/state by the embedded payroll partner,</text>
+      <text x="512" y="1926" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">acting as Reporting Agent.</text>
+    </g>
+    <g id="Step-07">
+      <rect x="888" y="1796" width="374" height="196" rx="4" fill="#F2F6FC" stroke="#CBD6E8" stroke-width="1" />
+      <text x="906" y="1828" font-family="IBM Plex Mono" font-size="11.2" fill="#2FD8E8" letter-spacing="0.7">07</text>
+      <text x="906" y="1854" font-family="Public Sans" font-size="15.2" fill="#1F2A3A" font-weight="600">Worker spends or cashes out</text>
+      <text x="906" y="1888" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">Card spend, free standard ACH, or an instant</text>
+      <text x="906" y="1907" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">2–3% fee withdrawal — the fee and interchange</text>
+      <text x="906" y="1926" font-family="Public Sans" font-size="13.7" fill="#3C4A5F">both roll up into Puddl3's revenue.</text>
+    </g>
+  </g>
+  <g id="Footer">
+    <path d="M100,2056 L1656,2056" stroke="#CBD6E8" stroke-width="1" />
+    <text x="100" y="2090" font-family="IBM Plex Mono" font-size="12" fill="#5C6B82">Puddl3 · Money Flow Operations — see Revenue Models, Frontend-Backend, Tax Withholdings, and Legal for full detail</text>
+  </g>
+</svg>
